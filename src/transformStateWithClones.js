@@ -27,8 +27,7 @@ function transformStateWithClones(state, actions) {
         break;
 
       default:
-        nextState = currentState;
-        break;
+        throw new Error(`Unrecognized action type: ${action.type}.`);
     }
 
     currentState = nextState;
